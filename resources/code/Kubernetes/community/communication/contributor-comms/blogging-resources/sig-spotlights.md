@@ -1,0 +1,17 @@
+# SIG Spotlights
+
+These are all the spot lights that are published to date:
+
+| SIG | Label | Link | Author | Publish Date |
+|-----|-------|------|--------|--------------|
+| [Windows](https://github.com/kubernetes/community/blob/master/sig-windows/README.md) | [windows](https://github.com/kubernetes/kubernetes/labels/sig%2Fwindows) | [SIG-Windows Spotlight](https://kubernetes.io/blog/2020/06/30/sig-windows-spotlight-2020/) | Kaslin Fields | 2020-06-30 |
+| [Usability](https://github.com/kubernetes/community/blob/master/sig-usability/README.md) | [usability](https://github.com/kubernetes/kubernetes/labels/sig%2Fusability) | [Spotlight on SIG Usability](https://kubernetes.io/blog/2021/07/15/sig-usability-spotlight-2021/) | Kunal Kushwaha | 2021-07-15 |
+| [Node](https://github.com/kubernetes/community/blob/master/sig-node/README.md) | [node](https://github.com/kubernetes/kubernetes/labels/sig%2Fnode) | [Spotlight no SIG Node](https://kubernetes.io/blog/2021/09/27/sig-node-spotlight-2021/) | Dewan Ahmed | 2021-09-27 |
+| [Multicluster](https://github.com/kubernetes/community/blob/master/sig-multicluster/README.md) | [multicluster](https://github.com/kubernetes/kubernetes/labels/sig%2Fmulticluster) | [Spotlight on SIG Multicluster](https://kubernetes.io/blog/2022/02/07/sig-multicluster-spotlight-2022/) | Dewan Ahmed <br> Chris Short | 2022-02-07  |
+| [Docs](https://github.com/kubernetes/community/blob/master/sig-docs/README.md) | [docs](https://github.com/kubernetes/kubernetes/labels/sig%2Fdocs) | [Spotlight on SIG Docs](https://kubernetes.io/blog/2022/08/02/sig-docs-spotlight-2022/) | Purneswar Prasad | 2022-08-02 |
+| [Storage](https://github.com/kubernetes/community/blob/master/sig-storage/README.md) | [storage](https://github.com/kubernetes/kubernetes/labels/sig%2Fstorage) | [Spotlight on SIG Storage](https://kubernetes.io/blog/2022/08/22/sig-storage-spotlight/) | Frederico Muñoz | 2022-08-22 |
+| [Instrumentation](https://github.com/kubernetes/community/blob/master/sig-instrumentation/README.md) | [instrumentation](https://github.com/kubernetes/kubernetes/labels/sig%2Finstrumentation) | [Spotlight on SIG Instrumentation](https://kubernetes.io/blog/2023/02/03/sig-instrumentation-spotlight-2023/) | Imran Noor Mohamed | 2023-02-03 |
+| [Network](https://github.com/kubernetes/community/blob/master/sig-network/README.md) | [network](https://github.com/kubernetes/kubernetes/labels/sig%2Fnetwork) | [Spotlight on SIG Network](https://www.kubernetes.dev/blog/2023/05/09/sig-network-spotlight-2023/) | Sujay Dey | 2023-05-09 |
+| [CLI](https://github.com/kubernetes/community/blob/master/sig-cli/README.md) | [CLI](https://github.com/kubernetes/kubernetes/labels/sig%2Fcli) | [Spotlight on SIG CLI](https://www.kubernetes.dev/blog/2023/07/20/sig-cli-spotlight-2023/) | Arpit Agrawal | 2023-07-20 |
+| [Contributor Experience](https://github.com/kubernetes/community/blob/master/sig-contributor-experience/README.md) | [contributor-experience](https://github.com/kubernetes/kubernetes/labels/sig%2Fcontributor-experience) | [Spotlight on SIG Contributor Experience](https://kubernetes.io/blog/2023/08/14/sig-contribex-spotlight-2023/) | Fyka Ansari | 2023-08-14 |
+| [Testing](https://github.com/kubernetes/community/tree/master/sig-testing#readme) | [testing](https://github.com/kubernetes/kubernetes/labels/sig%2Ftesting) | [Spotlight on SIG Testing](https://kubernetes.io/blog/2023/11/24/sig-testing-spotlight-2023/) | [Sandipan Panda](https://github.com/sandipanpanda) | 2023-11-24 |

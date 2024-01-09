@@ -1,0 +1,43 @@
+# NOTE: Please refer to https://aka.ms/azsdk/engsys/ci-yaml before editing this file.
+# This is for Track 1 and Track 2 data plane SDK
+
+trigger:
+  branches:
+    include:
+    - main
+    - hotfix/*
+    - release/*
+  paths:
+    include:
+      - sdk/eventgrid/Azure.Messaging.EventGrid
+      - sdk/eventgrid/Microsoft.Azure.Messaging.EventGrid.CloudNativeCloudEvents
+      - sdk/eventgrid/service.projects
+      - sdk/eventgrid/ci.yml
+
+pr:
+  branches:
+    include:
+    - main
+    - feature/*
+    - hotfix/*
+    - release/*
+  paths:
+    include:
+      - sdk/eventgrid/Azure.Messaging.EventGrid
+      - sdk/eventgrid/Microsoft.Azure.Messaging.EventGrid.CloudNativeCloudEvents
+      - sdk/eventgrid/service.projects
+      - sdk/eventgrid/ci.yml
+
+extends:
+  template: /eng/pipelines/templates/stages/archetype-sdk-client.yml
+  parameters:
+    SDKType: client
+    ServiceDirectory: eventgrid
+    ArtifactName: packages
+    Artifacts:
+    - name: Azure.Messaging.EventGrid
+      safeName: AzureMessagingEventGrid
+    - name: Microsoft.Azure.Messaging.EventGrid.CloudNativeCloudEvents
+      safeName: MicrosoftAzureMessagingEventGridCloudNativeCloudEvents
+
+    

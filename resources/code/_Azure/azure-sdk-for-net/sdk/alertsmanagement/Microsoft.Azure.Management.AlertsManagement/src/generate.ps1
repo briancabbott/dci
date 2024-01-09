@@ -1,0 +1,1 @@
+Start-AutoRestCodeGeneration -ResourceProvider "alertsmanagement/resource-manager" -AutoRestVersion "v2" -ConfigFileTag package-2021-08

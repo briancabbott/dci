@@ -1,0 +1,6 @@
+kaggle
+pandas
+tqdm
+lightgbm
+ta-lib-binary
+numpy==1.20.0

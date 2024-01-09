@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "data": {
+        "contents_checksum": "67b9d72612c32ef0e106f4195e2b0f9b176c8d27ba3f70f5cbad8bdb3699742b",
+        "source": "",
+        "type": "tar"
+      },
+      "dependencies": [
+        "local-extract"
+      ],
+      "details": {
+        "description": "Locally extract packages/versions from a container image.",
+        "display_name": "On-Demand Scanning API extraction helper"
+      },
+      "id": "local-extract-darwin-x86_64",
+      "is_configuration": false,
+      "is_hidden": true,
+      "is_required": false,
+      "platform": {
+        "architectures": [
+          "x86_64"
+        ],
+        "operating_systems": [
+          "MACOSX"
+        ]
+      },
+      "platform_required": false,
+      "version": {
+        "build_number": 20230811080439,
+        "version_string": "1.5.9"
+      }
+    }
+  ],
+  "revision": 20231220215703,
+  "schema_version": {
+    "no_update": false,
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz",
+    "version": 3
+  },
+  "version": "458.0.1"
+}

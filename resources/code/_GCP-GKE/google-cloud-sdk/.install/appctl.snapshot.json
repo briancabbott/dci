@@ -1,0 +1,45 @@
+{
+  "components": [
+    {
+      "dependencies": [
+        "appctl-darwin-x86",
+        "appctl-darwin-x86_64",
+        "appctl-linux-x86",
+        "appctl-linux-x86_64",
+        "appctl-windows-x86",
+        "appctl-windows-x86_64"
+      ],
+      "details": {
+        "description": "Provides appctl executable.",
+        "display_name": "Appctl"
+      },
+      "id": "appctl",
+      "is_configuration": false,
+      "is_hidden": false,
+      "is_required": false,
+      "platform": {
+        "architectures": [
+          "x86",
+          "x86_64"
+        ],
+        "operating_systems": [
+          "LINUX",
+          "MACOSX",
+          "WINDOWS"
+        ]
+      },
+      "platform_required": false,
+      "version": {
+        "build_number": 0,
+        "version_string": "0.1.12"
+      }
+    }
+  ],
+  "revision": 20231220215703,
+  "schema_version": {
+    "no_update": false,
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz",
+    "version": 3
+  },
+  "version": "458.0.1"
+}

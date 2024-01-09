@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "data": {
+        "contents_checksum": "c8cab19c95eabb6f7ec7912b0f3ca57c7d1c5306745359ae49400a3ffb000479",
+        "source": "",
+        "type": "tar"
+      },
+      "dependencies": [
+        "terraform-tools"
+      ],
+      "details": {
+        "description": "Tools for working with Terraform data",
+        "display_name": "Terraform Tools"
+      },
+      "id": "terraform-tools-darwin-x86_64",
+      "is_configuration": false,
+      "is_hidden": true,
+      "is_required": false,
+      "platform": {
+        "architectures": [
+          "x86_64"
+        ],
+        "operating_systems": [
+          "MACOSX"
+        ]
+      },
+      "platform_required": false,
+      "version": {
+        "build_number": 20230721154337,
+        "version_string": "0.11.1"
+      }
+    }
+  ],
+  "revision": 20231220215703,
+  "schema_version": {
+    "no_update": false,
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz",
+    "version": 3
+  },
+  "version": "458.0.1"
+}

@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "data": {
+        "contents_checksum": "2f749a0c99c92b3941dc02d2dfde512c49e0d7c219fdc43d1942332266abad36",
+        "source": "",
+        "type": "tar"
+      },
+      "dependencies": [
+        "cloud-run-proxy"
+      ],
+      "details": {
+        "description": "Provides cloud-run-proxy executable. See https://github.com/GoogleCloudPlatform/cloud-run-proxy",
+        "display_name": "Cloud Run Proxy"
+      },
+      "id": "cloud-run-proxy-darwin-x86_64",
+      "is_configuration": false,
+      "is_hidden": true,
+      "is_required": false,
+      "platform": {
+        "architectures": [
+          "x86_64"
+        ],
+        "operating_systems": [
+          "MACOSX"
+        ]
+      },
+      "platform_required": false,
+      "version": {
+        "build_number": 20231002150006,
+        "version_string": "0.5.0"
+      }
+    }
+  ],
+  "revision": 20231220215703,
+  "schema_version": {
+    "no_update": false,
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz",
+    "version": 3
+  },
+  "version": "458.0.1"
+}

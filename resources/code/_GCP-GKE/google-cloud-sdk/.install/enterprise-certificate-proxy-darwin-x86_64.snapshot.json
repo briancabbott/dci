@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "data": {
+        "contents_checksum": "6d407b55892613efd363344f855292ddda8fdbe81f549f318264480dc167b25a",
+        "source": "",
+        "type": "tar"
+      },
+      "dependencies": [
+        "enterprise-certificate-proxy"
+      ],
+      "details": {
+        "description": "The enterprise-certificate-proxy component is used for certificate based access to Google Cloud resources. See https://github.com/googleapis/enterprise-certificate-proxy for more information.",
+        "display_name": "enterprise-certificate-proxy"
+      },
+      "id": "enterprise-certificate-proxy-darwin-x86_64",
+      "is_configuration": false,
+      "is_hidden": true,
+      "is_required": false,
+      "platform": {
+        "architectures": [
+          "x86_64"
+        ],
+        "operating_systems": [
+          "MACOSX"
+        ]
+      },
+      "platform_required": false,
+      "version": {
+        "build_number": 20231208151900,
+        "version_string": "0.3.2"
+      }
+    }
+  ],
+  "revision": 20231220215703,
+  "schema_version": {
+    "no_update": false,
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz",
+    "version": 3
+  },
+  "version": "458.0.1"
+}

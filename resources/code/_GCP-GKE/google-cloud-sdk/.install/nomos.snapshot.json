@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "dependencies": [
+        "nomos-darwin-x86_64",
+        "nomos-linux-x86_64"
+      ],
+      "details": {
+        "description": "Provides nomos executable.",
+        "display_name": "Nomos CLI"
+      },
+      "id": "nomos",
+      "is_configuration": false,
+      "is_hidden": false,
+      "is_required": false,
+      "platform": {
+        "architectures": [
+          "x86_64"
+        ],
+        "operating_systems": [
+          "LINUX",
+          "MACOSX"
+        ]
+      },
+      "platform_required": false,
+      "version": {
+        "build_number": 0,
+        "version_string": "1.17.0-rc.4"
+      }
+    }
+  ],
+  "revision": 20231220215703,
+  "schema_version": {
+    "no_update": false,
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz",
+    "version": 3
+  },
+  "version": "458.0.1"
+}

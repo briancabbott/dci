@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "data": {
+        "contents_checksum": "0673ffaef7a4ad64419649ebe2b475f7a8693b3da629352565e7c234da099af1",
+        "source": "",
+        "type": "tar"
+      },
+      "dependencies": [
+        "bigtable",
+        "core"
+      ],
+      "details": {
+        "description": "Provides a tool for local Cloud Bigtable emulation.",
+        "display_name": "Cloud Bigtable Emulator"
+      },
+      "id": "bigtable-darwin-x86_64",
+      "is_configuration": false,
+      "is_hidden": true,
+      "is_required": false,
+      "platform": {
+        "architectures": [
+          "x86_64"
+        ],
+        "operating_systems": [
+          "MACOSX"
+        ]
+      },
+      "platform_required": false,
+      "version": {
+        "build_number": 20231215195722,
+        "version_string": ""
+      }
+    }
+  ],
+  "revision": 20231220215703,
+  "schema_version": {
+    "no_update": false,
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz",
+    "version": 3
+  },
+  "version": "458.0.1"
+}

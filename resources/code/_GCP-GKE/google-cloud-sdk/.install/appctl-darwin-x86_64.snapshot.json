@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "data": {
+        "contents_checksum": "8f6243a30cde23bea18034fe4b1dcd8373a2e410d92fc784d5708ffb817bb418",
+        "source": "",
+        "type": "tar"
+      },
+      "dependencies": [
+        "appctl"
+      ],
+      "details": {
+        "description": "Provides appctl executable.",
+        "display_name": "Appctl"
+      },
+      "id": "appctl-darwin-x86_64",
+      "is_configuration": false,
+      "is_hidden": true,
+      "is_required": false,
+      "platform": {
+        "architectures": [
+          "x86_64"
+        ],
+        "operating_systems": [
+          "MACOSX"
+        ]
+      },
+      "platform_required": false,
+      "version": {
+        "build_number": 20200626165905,
+        "version_string": "0.1.12"
+      }
+    }
+  ],
+  "revision": 20231220215703,
+  "schema_version": {
+    "no_update": false,
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz",
+    "version": 3
+  },
+  "version": "458.0.1"
+}

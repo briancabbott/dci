@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "data": {
+        "contents_checksum": "e1f2fabffeb3a93961c32a19fbe728599f9ef5f602bc9302dddf3491dbfc9f67",
+        "source": "",
+        "type": "tar"
+      },
+      "dependencies": [
+        "cloud_sql_proxy"
+      ],
+      "details": {
+        "description": "Provides cloud_sql_proxy executable. See https://github.com/GoogleCloudPlatform/cloudsql-proxy",
+        "display_name": "Cloud SQL Proxy"
+      },
+      "id": "cloud_sql_proxy-darwin-x86_64",
+      "is_configuration": false,
+      "is_hidden": true,
+      "is_required": false,
+      "platform": {
+        "architectures": [
+          "x86_64"
+        ],
+        "operating_systems": [
+          "MACOSX"
+        ]
+      },
+      "platform_required": false,
+      "version": {
+        "build_number": 20211210155428,
+        "version_string": "1.27.0"
+      }
+    }
+  ],
+  "revision": 20231220215703,
+  "schema_version": {
+    "no_update": false,
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz",
+    "version": 3
+  },
+  "version": "458.0.1"
+}

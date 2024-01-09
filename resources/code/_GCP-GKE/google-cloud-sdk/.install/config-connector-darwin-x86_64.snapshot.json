@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "data": {
+        "contents_checksum": "d234dc236ff1c4d88fb4caebd61955df9d3ee5b3db094472dce64f031d646e97",
+        "source": "",
+        "type": "tar"
+      },
+      "dependencies": [
+        "config-connector"
+      ],
+      "details": {
+        "description": "Google Cloud Config Connector. See https://cloud.google.com/config-connector/docs/overview",
+        "display_name": "config-connector"
+      },
+      "id": "config-connector-darwin-x86_64",
+      "is_configuration": false,
+      "is_hidden": true,
+      "is_required": false,
+      "platform": {
+        "architectures": [
+          "x86_64"
+        ],
+        "operating_systems": [
+          "MACOSX"
+        ]
+      },
+      "platform_required": false,
+      "version": {
+        "build_number": 20220912133630,
+        "version_string": "1.93.0"
+      }
+    }
+  ],
+  "revision": 20231220215703,
+  "schema_version": {
+    "no_update": false,
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz",
+    "version": 3
+  },
+  "version": "458.0.1"
+}

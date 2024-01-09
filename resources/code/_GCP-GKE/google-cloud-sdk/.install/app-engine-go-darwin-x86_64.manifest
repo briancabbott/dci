@@ -1,0 +1,5 @@
+platform/google_appengine/LICENSE.golang
+platform/google_appengine/RELEASE_NOTES.golang
+platform/google_appengine/THIRD_PARTY_NOTICES.golang
+platform/google_appengine/VERSION.golang
+platform/google_appengine/go-app-stager

@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "data": {
+        "contents_checksum": "706fe93e6842fe68860507bc65fdbe08660e1063d61c882667dee51608789284",
+        "source": "",
+        "type": "tar"
+      },
+      "dependencies": [
+        "kpt"
+      ],
+      "details": {
+        "description": "Kubernetes Platform Toolkit for packaging, customizing and applying Resource configuration.",
+        "display_name": "kpt"
+      },
+      "id": "kpt-darwin-x86_64",
+      "is_configuration": false,
+      "is_hidden": true,
+      "is_required": false,
+      "platform": {
+        "architectures": [
+          "x86_64"
+        ],
+        "operating_systems": [
+          "MACOSX"
+        ]
+      },
+      "platform_required": false,
+      "version": {
+        "build_number": 20231215195722,
+        "version_string": "1.0.0-beta.49"
+      }
+    }
+  ],
+  "revision": 20231220215703,
+  "schema_version": {
+    "no_update": false,
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz",
+    "version": 3
+  },
+  "version": "458.0.1"
+}

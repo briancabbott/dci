@@ -1,0 +1,462 @@
+Files:
+
+codec/codec.go
+codec/codec_test.go
+gogoproto/doc.go
+gogoproto/gogo.proto
+gogoproto/helper.go
+gogoproto/Makefile
+io/full.go
+io/io.go
+io/io_test.go
+io/uint32.go
+io/varint.go
+LICESNSE
+Makefile
+plugin/compare/compare.go
+plugin/compare/comparetest.go
+plugin/defaultcheck/defaultcheck.go
+plugin/description/description.go
+plugin/description/descriptiontest.go
+plugin/embedcheck/embedcheck.go
+plugin/enumstringer/enumstringer.go
+plugin/equal/equal.go
+plugin/equal/equaltest.go
+plugin/face/face.go
+plugin/face/facetest.go
+plugin/gostring/gostring.go
+plugin/gostring/gostringtest.go
+plugin/marshalto/marshalto.go
+plugin/oneofcheck/oneofcheck.go
+plugin/populate/populate.go
+plugin/size/size.go
+plugin/size/sizetest.go
+plugin/stringer/stringer.go
+plugin/stringer/stringertest.go
+plugin/testgen/testgen.go
+plugin/union/union.go
+plugin/union/uniontest.go
+plugin/unmarshal/unmarshal.go
+protoc_gen_combo/combo.go
+protoc_gen_gofast/main.go
+protoc_gen_gogo/descriptor/helper.go
+protoc_gen_gogofaster/main.go
+protoc_gen_gogofast/main.go
+protoc_gen_gogo/generator/helper.go
+protoc_gen_gogoslick/main.go
+protoc_gen_gogotypes/main.go
+protoc_gen_gostring/main.go
+protoc_min_version/minversion.go
+proto/custom_gogo.go
+proto/duration_gogo.go
+proto/encode_gogo.go
+proto/extensions_gogo.go
+proto/lib_gogo.go
+proto/pointer_reflect_gogo.go
+proto/pointer_unsafe_gogo.go
+proto/properties_gogo.go
+proto/skip_gogo.go
+proto/table_marshal_gogo.go
+proto/table_unmarshal_gogo.go
+proto/text_gogo.go
+proto/timestamp_gogo.go
+proto/wrappers.go
+proto/wrappers_gogo.go
+sortkeys/sortkeys.go
+test/asymetric_issue125/asym.proto
+test/asymetric_issue125/asym_test.go
+test/asymetric_issue125/Makefile
+test/asymetric_issue125/pop.go
+test/bug_test.go
+test/cachedsize/cachedsize.proto
+test/cachedsize/cachedsize_test.go
+test/cachedsize/Makefile
+test/casttype/casttype.proto
+test/casttype/combos/both/casttype.proto
+test/casttype/combos/marshaler/casttype.proto
+test/casttype/combos/neither/casttype.proto
+test/casttype/combos/unmarshaler/casttype.proto
+test/casttype/Makefile
+test/casttype/mytypes.go
+test/castvalue/castvalue.proto
+test/castvalue/combos/both/castvalue.proto
+test/castvalue/combos/both/mytypes.go
+test/castvalue/combos/marshaler/castvalue.proto
+test/castvalue/combos/marshaler/mytypes.go
+test/castvalue/combos/unmarshaler/castvalue.proto
+test/castvalue/combos/unmarshaler/mytypes.go
+test/castvalue/Makefile
+test/castvalue/mytypes.go
+test/combos/both/bug_test.go
+test/combos/both/thetest.proto
+test/combos/both/uuid.go
+test/combos/marshaler/bug_test.go
+test/combos/marshaler/thetest.proto
+test/combos/marshaler/uuid.go
+test/combos/unmarshaler/bug_test.go
+test/combos/unmarshaler/thetest.proto
+test/combos/unmarshaler/uuid.go
+test/custombytesnonstruct/custombytesnonstruct_test.go
+test/custombytesnonstruct/customtype.go
+test/custombytesnonstruct/Makefile
+test/custombytesnonstruct/proto.proto
+test/custom/custom.go
+test/custom/custom_test.go
+test/custom_dash_type/customdash.go
+test/data/data.proto
+test/data/Makefile
+test/defaultconflict/df.proto
+test/defaultconflict/dg.proto
+test/defaultconflict/nc.proto
+test/defaultconflict/nc_test.go
+test/defaultconflict/ne.proto
+test/defaultconflict/nx.proto
+test/deterministic/deterministic.proto
+test/deterministic/deterministic_test.go
+test/deterministic/Makefile
+test/empty_issue70/empty.proto
+test/empty_issue70/empty_test.go
+test/empty_issue70/Makefile
+test/enumcustomname/enumcustomname.proto
+test/enumcustomname/Makefile
+test/enumprefix/enumprefix.proto
+test/enumprefix/Makefile
+test/enumstringer/enumstringer.proto
+test/enumstringer/Makefile
+test/enumstringer/string.go
+test/example/example.proto
+test/example/example_test.go
+test/example/Makefile
+test/extension_test.go
+test/filedotname/file.dot.proto
+test/filedotname/Makefile
+test/fuzztests/fuzz.proto
+test/fuzztests/fuzz_test.go
+test/fuzztests/Makefile
+test/group/group.proto
+test/group/Makefile
+test/importdedup/importdedup_test.go
+test/importdedup/Makefile
+test/importdedup/proto.proto
+test/importdedup/subpkg/customtype.go
+test/importdedup/subpkg/subproto.proto
+test/importduplicate/importduplicate.proto
+test/importduplicate/importduplicate_test.go
+test/importduplicate/Makefile
+test/importduplicate/proto/proto.proto
+test/importduplicate/sortkeys/sortable.proto
+test/indeximport_issue72/indeximport.proto
+test/indeximport_issue72/index/index.proto
+test/indeximport_issue72/Makefile
+test/int64support/Makefile
+test/issue34/issue34_test.go
+test/issue34/Makefile
+test/issue34/proto.proto
+test/issue42order/issue42.proto
+test/issue42order/Makefile
+test/issue42order/order_test.go
+test/issue444/issue444.proto
+test/issue444/issue444_test.go
+test/issue444/Makefile
+test/issue449/issue449.proto
+test/issue449/issue449_test.go
+test/issue449/Makefile
+test/issue498/issue498.proto
+test/issue498/Makefile
+test/issue503/issue503.proto
+test/issue503/issue503_test.go
+test/issue503/Makefile
+test/issue530/issue530.proto
+test/issue530/issue530_test.go
+test/issue530/Makefile
+test/issue8/Makefile
+test/issue8/proto.proto
+test/Makefile
+test/mapdefaults/combos/both/map.proto
+test/mapdefaults/combos/both/map_test.go
+test/mapdefaults/combos/both/unknown_test.go
+test/mapdefaults/combos/marshaler/map.proto
+test/mapdefaults/combos/marshaler/map_test.go
+test/mapdefaults/combos/neither/map.proto
+test/mapdefaults/combos/neither/map_test.go
+test/mapdefaults/combos/unmarshaler/map.proto
+test/mapdefaults/combos/unmarshaler/map_test.go
+test/mapdefaults/combos/unmarshaler/unknown_test.go
+test/mapdefaults/Makefile
+test/mapdefaults/map.proto
+test/mapdefaults/map_test.go.in
+test/mapdefaults/unknown_test.go.in
+test/mapsproto2/combos/both/mapsproto2_test.go
+test/mapsproto2/combos/marshaler/mapsproto2_test.go
+test/mapsproto2/combos/neither/mapsproto2_test.go
+test/mapsproto2/combos/unmarshaler/mapsproto2_test.go
+test/mapsproto2/Makefile
+test/mapsproto2/mapsproto2_test.go.in
+test/mixbench/mixbench.go
+test/moredefaults/Makefile
+test/moredefaults/md.proto
+test/moredefaults/md_test.go
+test/nopackage/Makefile
+test/nopackage/nopackage.proto
+test/nopackage/nopackage_test.go
+test/oneof3/combos/both/one.proto
+test/oneof3/combos/marshaler/one.proto
+test/oneof3/combos/neither/one.proto
+test/oneof3/combos/unmarshaler/one.proto
+test/oneof3/Makefile
+test/oneof3/one.proto
+test/oneof/combos/both/one.proto
+test/oneof/combos/marshaler/one.proto
+test/oneof/combos/neither/one.proto
+test/oneof/combos/unmarshaler/one.proto
+test/oneofembed/Makefile
+test/oneofembed/oneofembed.proto
+test/oneof/Makefile
+test/oneof/one.proto
+test/packed/Makefile
+test/packed/packed.proto
+test/packed/packed_test.go
+test/proto3extension/Makefile
+test/protosize/Makefile
+test/protosize/protosize.proto
+test/protosize/protosize_test.go
+test/registration/Makefile
+test/registration/registration.proto
+test/registration/registration_test.go.in
+test/required/Makefile
+test/required/requiredexamplepb_test.go
+test/required/requiredexample.proto
+test/setextensionbytes/Makefile
+test/setextensionbytes/setextensionbytes.proto
+test/setextensionbytes/setextensionbytes_test.go
+test/sizeunderscore/Makefile
+test/sizeunderscore/sizeunderscore.proto
+test/stdtypes/Makefile
+test/stdtypes/stdtypes.proto
+test/tags/Makefile
+test/tags/tags.proto
+test/tags/tags_test.go
+test/theproto3/combos/both/proto3_test.go
+test/theproto3/combos/marshaler/proto3_test.go
+test/theproto3/combos/neither/proto3_test.go
+test/theproto3/combos/unmarshaler/proto3_test.go
+test/theproto3/Makefile
+test/theproto3/proto3_test.go.in
+test/thetest.proto
+test/types/combos/both/types.proto
+test/types/combos/both/types_test.go
+test/types/combos/marshaler/types.proto
+test/types/combos/marshaler/types_test.go
+test/types/combos/neither/types.proto
+test/types/combos/neither/types_test.go
+test/types/combos/unmarshaler/types.proto
+test/types/combos/unmarshaler/types_test.go
+test/types/Makefile
+test/types/types.proto
+test/types/types_test.go.in
+test/unmarshalmerge/Makefile
+test/unmarshalmerge/unmarshalmerge.proto
+test/unmarshalmerge/unmarshalmerge_test.go
+test/unrecognizedgroup/Makefile
+test/unrecognizedgroup/oldnew_test.go
+test/unrecognizedgroup/unrecognizedgroup.proto
+test/unrecognized/Makefile
+test/unrecognized/oldnew_test.go
+test/unrecognized/unrecognized.proto
+test/uuid.go
+test/uuid_test.go
+test/xxxfields/Makefile
+test/xxxfields/xxxfields.proto
+types/duration_gogo.go
+types/timestamp_gogo.go
+types/wrappers_gogo.go
+vanity/command/command.go
+vanity/enum.go
+vanity/field.go
+vanity/file.go
+vanity/foreach.go
+vanity/msg.go
+version/version.go
+
+Copyright (c) 2013, The GoGo Authors. All rights reserved.
+
+Protocol Buffers for Go with Gadgets
+
+Copyright (c) 2013, The GoGo Authors. All rights reserved.
+http://github.com/gogo/protobuf
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+    * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+------------------
+
+Files:
+
+conformance/conformance.go
+conformance/internal/conformance_proto/conformance.proto
+conformance/Makefile
+jsonpb/jsonpb.go
+proto/all_test.go
+proto/any_test.go
+protobuf/google/protobuf/any.proto
+protobuf/google/protobuf/api.proto
+protobuf/google/protobuf/compiler/plugin.proto
+protobuf/google/protobuf/descriptor.proto
+protobuf/google/protobuf/duration.proto
+protobuf/google/protobuf/empty.proto
+protobuf/google/protobuf/field_mask.proto
+protobuf/google/protobuf/source_context.proto
+protobuf/google/protobuf/struct.proto
+protobuf/google/protobuf/timestamp.proto
+protobuf/google/protobuf/type.proto
+protobuf/google/protobuf/wrappers.proto
+protoc_gen_gogo/descriptor/descriptor.go
+protoc_gen_gogo/descriptor/Makefile
+protoc_gen_gogo/doc.go
+protoc_gen_gogo/generator/generator.go
+protoc_gen_gogo/generator/internal/remap/remap.go
+protoc_gen_gogo/generator/internal/remap/remap_test.go
+protoc_gen_gogo/generator/name_test.go
+protoc_gen_gogo/grpc/grpc.go
+protoc_gen_gogo/main.go
+protoc_gen_gogo/Makefile
+protoc_gen_gogo/plugin/Makefile
+protoc_gen_gogo/testdata/deprecated/deprecated.proto
+protoc_gen_gogo/testdata/extension_base/extension_base.proto
+protoc_gen_gogo/testdata/extension_extra/extension_extra.proto
+protoc_gen_gogo/testdata/extension_test.go
+protoc_gen_gogo/testdata/extension_user/extension_user.proto
+protoc_gen_gogo/testdata/grpc/grpc_empty.proto
+protoc_gen_gogo/testdata/grpc/grpc.proto
+protoc_gen_gogo/testdata/import_public/a.proto
+protoc_gen_gogo/testdata/import_public/b.proto
+protoc_gen_gogo/testdata/import_public/importing/importing.proto
+protoc_gen_gogo/testdata/import_public/sub/a.proto
+protoc_gen_gogo/testdata/import_public/sub/b.proto
+protoc_gen_gogo/testdata/imports/fmt/m.proto
+protoc_gen_gogo/testdata/imports/test_a_1/m1.proto
+protoc_gen_gogo/testdata/imports/test_a_1/m2.proto
+protoc_gen_gogo/testdata/imports/test_a_2/m3.proto
+protoc_gen_gogo/testdata/imports/test_a_2/m4.proto
+protoc_gen_gogo/testdata/imports/test_b_1/m1.proto
+protoc_gen_gogo/testdata/imports/test_b_1/m2.proto
+protoc_gen_gogo/testdata/imports/test_import_a1m1.proto
+protoc_gen_gogo/testdata/imports/test_import_a1m2.proto
+protoc_gen_gogo/testdata/imports/test_import_all.proto
+protoc_gen_gogo/testdata/main_test.go
+protoc_gen_gogo/testdata/Makefile
+protoc_gen_gogo/testdata/multi/multi1.proto
+protoc_gen_gogo/testdata/multi/multi2.proto
+protoc_gen_gogo/testdata/multi/multi3.proto
+protoc_gen_gogo/testdata/my_test/test.proto
+protoc_gen_gogo/testdata/proto3/proto3.proto
+proto/clone.go
+proto/clone_test.go
+proto/decode.go
+proto/decode_test.go
+proto/deprecated.go
+proto/discard.go
+proto/discard_test.go
+proto/duration.go
+proto/encode.go
+proto/encode_test.go
+proto/equal.go
+proto/equal_test.go
+proto/extensions.go
+proto/extensions_test.go
+proto/lib.go
+proto/Makefile
+proto/message_set.go
+proto/message_set_test.go
+proto/pointer_reflect.go
+proto/pointer_unsafe.go
+proto/properties.go
+proto/proto3_proto/proto3.proto
+proto/proto3_test.go
+proto/size2_test.go
+proto/size_test.go
+proto/table_marshal.go
+proto/table_merge.go
+proto/table_unmarshal.go
+proto/test_proto/Makefile
+proto/test_proto/test.proto
+proto/text.go
+proto/text_parser.go
+proto/text_parser_test.go
+proto/text_test.go
+proto/timestamp.go
+test/issue411/issue411.proto
+test/mapsproto2/combos/both/mapsproto2.proto
+test/mapsproto2/combos/marshaler/mapsproto2.proto
+test/mapsproto2/combos/neither/mapsproto2.proto
+test/mapsproto2/combos/unmarshaler/mapsproto2.proto
+test/mapsproto2/header.proto
+test/mapsproto2/mapsproto2.proto
+test/theproto3/combos/both/theproto3.proto
+test/theproto3/combos/marshaler/theproto3.proto
+test/theproto3/combos/neither/theproto3.proto
+test/theproto3/combos/unmarshaler/theproto3.proto
+test/theproto3/header.proto
+test/theproto3/theproto3.proto
+types/any.go
+types/any_test.go
+types/doc.go
+types/duration.go
+types/duration_test.go
+types/timestamp.go
+types/timestamp_test.go
+
+Copyright (c) 2013, The GoGo Authors. All rights reserved.
+
+Protocol Buffers for Go with Gadgets
+
+Go support for Protocol Buffers - Google's data interchange format
+
+Copyright 2010 The Go Authors.  All rights reserved.
+https://github.com/golang/protobuf
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+    * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+    * Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

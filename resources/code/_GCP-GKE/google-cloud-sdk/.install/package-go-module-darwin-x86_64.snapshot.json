@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "data": {
+        "contents_checksum": "bf677ba3b82c4b49b1a62a208da3414358a56819f79c77cc67285db7f6611363",
+        "source": "",
+        "type": "tar"
+      },
+      "dependencies": [
+        "package-go-module"
+      ],
+      "details": {
+        "description": "Package a Go module zip file from Go source code.",
+        "display_name": "Artifact Registry Go Module Package Helper"
+      },
+      "id": "package-go-module-darwin-x86_64",
+      "is_configuration": false,
+      "is_hidden": true,
+      "is_required": false,
+      "platform": {
+        "architectures": [
+          "x86_64"
+        ],
+        "operating_systems": [
+          "MACOSX"
+        ]
+      },
+      "platform_required": false,
+      "version": {
+        "build_number": 20230609142206,
+        "version_string": "0.4.0"
+      }
+    }
+  ],
+  "revision": 20231220215703,
+  "schema_version": {
+    "no_update": false,
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz",
+    "version": 3
+  },
+  "version": "458.0.1"
+}

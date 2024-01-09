@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "data": {
+        "contents_checksum": "b4c5609dd10b63e9946c1afaf9a6e242fe3b09cb0d5c0c453e4ead4fb173c4e2",
+        "source": "",
+        "type": "tar"
+      },
+      "dependencies": [
+        "kubectl-oidc"
+      ],
+      "details": {
+        "description": "Configure kubectl with OIDC credentials for GKE clusters.",
+        "display_name": "kubectl-oidc"
+      },
+      "id": "kubectl-oidc-darwin-x86_64",
+      "is_configuration": false,
+      "is_hidden": true,
+      "is_required": false,
+      "platform": {
+        "architectures": [
+          "x86_64"
+        ],
+        "operating_systems": [
+          "MACOSX"
+        ]
+      },
+      "platform_required": false,
+      "version": {
+        "build_number": 20231201141418,
+        "version_string": "1.5.0"
+      }
+    }
+  ],
+  "revision": 20231220215703,
+  "schema_version": {
+    "no_update": false,
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz",
+    "version": 3
+  },
+  "version": "458.0.1"
+}

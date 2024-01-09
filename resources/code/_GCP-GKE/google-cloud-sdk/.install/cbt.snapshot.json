@@ -1,0 +1,48 @@
+{
+  "components": [
+    {
+      "dependencies": [
+        "cbt-darwin-arm",
+        "cbt-darwin-x86",
+        "cbt-darwin-x86_64",
+        "cbt-linux-arm",
+        "cbt-linux-x86",
+        "cbt-linux-x86_64",
+        "cbt-windows-x86",
+        "cbt-windows-x86_64"
+      ],
+      "details": {
+        "description": "Provides the cbt tool for interacting with the Cloud Bigtable service.",
+        "display_name": "Cloud Bigtable Command Line Tool"
+      },
+      "id": "cbt",
+      "is_configuration": false,
+      "is_hidden": false,
+      "is_required": false,
+      "platform": {
+        "architectures": [
+          "arm",
+          "x86",
+          "x86_64"
+        ],
+        "operating_systems": [
+          "LINUX",
+          "MACOSX",
+          "WINDOWS"
+        ]
+      },
+      "platform_required": false,
+      "version": {
+        "build_number": 0,
+        "version_string": "1.17.1"
+      }
+    }
+  ],
+  "revision": 20231220215703,
+  "schema_version": {
+    "no_update": false,
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz",
+    "version": 3
+  },
+  "version": "458.0.1"
+}

@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "dependencies": [
+        "cloud-run-proxy-darwin-arm",
+        "cloud-run-proxy-darwin-x86_64",
+        "cloud-run-proxy-linux-arm",
+        "cloud-run-proxy-linux-x86_64",
+        "cloud-run-proxy-windows-x86_64"
+      ],
+      "details": {
+        "description": "Provides cloud-run-proxy executable. See https://github.com/GoogleCloudPlatform/cloud-run-proxy",
+        "display_name": "Cloud Run Proxy"
+      },
+      "id": "cloud-run-proxy",
+      "is_configuration": false,
+      "is_hidden": false,
+      "is_required": false,
+      "platform": {
+        "architectures": [
+          "arm",
+          "x86_64"
+        ],
+        "operating_systems": [
+          "LINUX",
+          "MACOSX",
+          "WINDOWS"
+        ]
+      },
+      "platform_required": false,
+      "version": {
+        "build_number": 0,
+        "version_string": "0.5.0"
+      }
+    }
+  ],
+  "revision": 20231220215703,
+  "schema_version": {
+    "no_update": false,
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz",
+    "version": 3
+  },
+  "version": "458.0.1"
+}

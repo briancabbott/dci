@@ -1,0 +1,16 @@
+platform/php55/curl.so
+platform/php55/fileinfo.so
+platform/php55/gae_runtime_module.so
+platform/php55/imagick.so
+platform/php55/intl.so
+platform/php55/libfreetype.6.dylib
+platform/php55/libicudata.55.dylib
+platform/php55/libicui18n.55.dylib
+platform/php55/libicuio.55.dylib
+platform/php55/libicuuc.55.dylib
+platform/php55/libpng16.16.dylib
+platform/php55/libprotobuf.8.dylib
+platform/php55/mongo.so
+platform/php55/php
+platform/php55/php-cgi
+platform/php55/xdebug.so

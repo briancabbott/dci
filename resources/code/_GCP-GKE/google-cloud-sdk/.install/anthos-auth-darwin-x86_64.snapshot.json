@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "data": {
+        "contents_checksum": "80a810795133e6ed5d17b963606a980c85e059011c9eeffc4b23fdecbbc95736",
+        "source": "",
+        "type": "tar"
+      },
+      "dependencies": [
+        "anthos-auth"
+      ],
+      "details": {
+        "description": "Configure kubectl with OIDC credentials for Anthos clusters.",
+        "display_name": "anthos-auth"
+      },
+      "id": "anthos-auth-darwin-x86_64",
+      "is_configuration": false,
+      "is_hidden": true,
+      "is_required": false,
+      "platform": {
+        "architectures": [
+          "x86_64"
+        ],
+        "operating_systems": [
+          "MACOSX"
+        ]
+      },
+      "platform_required": false,
+      "version": {
+        "build_number": 20231201141418,
+        "version_string": "1.5.0"
+      }
+    }
+  ],
+  "revision": 20231220215703,
+  "schema_version": {
+    "no_update": false,
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz",
+    "version": 3
+  },
+  "version": "458.0.1"
+}

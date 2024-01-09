@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "dependencies": [
+        "kpt-darwin-arm",
+        "kpt-darwin-x86_64",
+        "kpt-linux-arm",
+        "kpt-linux-x86_64"
+      ],
+      "details": {
+        "description": "Kubernetes Platform Toolkit for packaging, customizing and applying Resource configuration.",
+        "display_name": "kpt"
+      },
+      "id": "kpt",
+      "is_configuration": false,
+      "is_hidden": false,
+      "is_required": false,
+      "platform": {
+        "architectures": [
+          "arm",
+          "x86_64"
+        ],
+        "operating_systems": [
+          "LINUX",
+          "MACOSX"
+        ]
+      },
+      "platform_required": false,
+      "version": {
+        "build_number": 0,
+        "version_string": "1.0.0-beta.49"
+      }
+    }
+  ],
+  "revision": 20231220215703,
+  "schema_version": {
+    "no_update": false,
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz",
+    "version": 3
+  },
+  "version": "458.0.1"
+}

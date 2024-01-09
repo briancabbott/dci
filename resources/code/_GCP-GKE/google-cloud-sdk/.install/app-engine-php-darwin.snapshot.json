@@ -1,0 +1,41 @@
+{
+  "components": [
+    {
+      "data": {
+        "contents_checksum": "5682195caf966a52c95bb865a3c2b607237ed97c36952b479ef358370401aaeb",
+        "source": "",
+        "type": "tar"
+      },
+      "dependencies": [
+        "app-engine-php",
+        "app-engine-python",
+        "core"
+      ],
+      "details": {
+        "description": "Provides the PHP runtimes for the dev_appserver.",
+        "display_name": "gcloud app PHP Extensions"
+      },
+      "id": "app-engine-php-darwin",
+      "is_configuration": false,
+      "is_hidden": true,
+      "is_required": false,
+      "platform": {
+        "operating_systems": [
+          "MACOSX"
+        ]
+      },
+      "platform_required": false,
+      "version": {
+        "build_number": 20170915105257,
+        "version_string": "2017.09.15"
+      }
+    }
+  ],
+  "revision": 20231220215703,
+  "schema_version": {
+    "no_update": false,
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz",
+    "version": 3
+  },
+  "version": "458.0.1"
+}

@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "data": {
+        "contents_checksum": "2240a0c0c35f660fbf17fd02f75a042fa8476898b757b6be09e6fca83ecd744b",
+        "source": "",
+        "type": "tar"
+      },
+      "dependencies": [
+        "kustomize"
+      ],
+      "details": {
+        "description": "Provides kustomize executable.",
+        "display_name": "Kustomize"
+      },
+      "id": "kustomize-darwin-x86_64",
+      "is_configuration": false,
+      "is_hidden": true,
+      "is_required": false,
+      "platform": {
+        "architectures": [
+          "x86_64"
+        ],
+        "operating_systems": [
+          "MACOSX"
+        ]
+      },
+      "platform_required": false,
+      "version": {
+        "build_number": 20211105152221,
+        "version_string": "4.4.0"
+      }
+    }
+  ],
+  "revision": 20231220215703,
+  "schema_version": {
+    "no_update": false,
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz",
+    "version": 3
+  },
+  "version": "458.0.1"
+}

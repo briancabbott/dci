@@ -1,0 +1,53 @@
+parameters:
+  name: ""
+  platforms: ""
+  os_versions: ""
+
+steps:
+  - task: Docker@2
+    displayName: Login
+    inputs:
+      containerRegistry: $(ACR_SERVICE_CONNECTION)
+      command: "login"
+      addPipelineData: false
+
+  - script: |
+      set -e
+      make ${{ parameters.name }}-manifest-build PLATFORMS="${{ parameters.platforms }}" OS_VERSIONS="${{ parameters.os_versions }}"
+    name: manifest_build
+    displayName: Manifest Build
+    retryCountOnTaskFailure: 3
+
+  - script: |
+      set -ex
+      echo "checking XDG_RUNTIME_DIR"
+      echo $XDG_RUNTIME_DIR
+      make ${{ parameters.name }}-manifest-push
+      mkdir -p $(Build.ArtifactStagingDirectory)/images
+
+      echo "setting XDG_RUNTIME_DIR"
+      export XDG_RUNTIME_DIR=/run/user/$(id -u)
+      echo $XDG_RUNTIME_DIR
+
+      make ${{ parameters.name }}-skopeo-archive IMAGE_ARCHIVE_DIR=$(Build.ArtifactStagingDirectory)/images
+    name: manifest_push
+    displayName: Manifest Push
+    retryCountOnTaskFailure: 3
+
+  - task: Docker@2
+    displayName: Logout
+    inputs:
+      containerRegistry: $(ACR_SERVICE_CONNECTION)
+      command: "logout"
+      addPipelineData: false
+
+  - task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
+    displayName: "Add SBOM Generator tool"
+    inputs:
+      BuildDropPath: "$(Build.ArtifactStagingDirectory)"
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      artifactName: "output"
+      pathtoPublish: "$(Build.ArtifactStagingDirectory)"
+    condition: succeeded()

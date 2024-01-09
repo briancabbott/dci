@@ -1,0 +1,60 @@
+parameters:
+  - name: LicenseCheck
+    type: boolean
+    default: true
+  - name: GoLintCLIVersion
+    type: string
+    default: 'v1.46.2'
+
+
+stages:
+  - stage: Build_Analyze
+    jobs:
+    - job: Build
+      displayName: Build on
+      strategy:
+        matrix:
+          Linux_Go118:
+            pool.name: azsdk-pool-mms-ubuntu-2004-general
+            image.name: MMSUbuntu20.04
+            go.version: '1.18.2'
+          Windows_Go118:
+            pool.name: azsdk-pool-mms-win-2019-general
+            image.name: MMS2019
+            go.version: '1.18.2'
+            generate.bom: true
+
+      pool:
+        name: $(pool.name)
+        vmImage: $(image.name)
+        
+      steps:
+      - task: GoTool@0
+        inputs:
+          version: '$(go.version)'
+        displayName: "Select Go Version"
+        
+      - template: ../steps/create-go-workspace.yml
+      
+      - template: ../steps/build.yml
+        parameters:
+          Image: $(vm.image)
+          GoVersion: $(go.version)
+
+    - job: Analyze
+      displayName: Analyze
+      pool:
+        name: azsdk-pool-mms-ubuntu-2004-general
+
+      steps:
+      - task: GoTool@0
+        inputs:
+          version: '1.18.2'
+        displayName: "Select Go Version"
+
+      - template: ../steps/create-go-workspace.yml
+
+      - template: ../steps/analyze.yml
+        parameters:
+          LintVersion: ${{ parameters.GoLintCLIVersion }}
+          LicenseCheck: ${{ parameters.LicenseCheck }}

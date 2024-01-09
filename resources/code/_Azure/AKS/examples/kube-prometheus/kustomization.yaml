@@ -1,0 +1,8 @@
+resources:
+- github.com/prometheus-operator/kube-prometheus?ref=v0.9.0
+- coredns-prometheusRule.yaml
+
+patchesStrategicMerge:
+- alertmanager-secret.yaml
+- node-exporter-daemonset.yaml
+- kubernetes-serviceMonitorCoreDNS_patch.yaml

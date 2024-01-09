@@ -1,0 +1,40 @@
+# Binaries
+out/*
+output/*
+
+# Artifacts
+azure-*.json
+ipam-*.xml
+
+# Environment
+.vscode/*
+
+# Coverage 
+*.out
+
+# Goland
+.idea/*
+
+# Logs
+*.log
+
+# debug test files
+*.test
+
+controller-gen
+build/tools/bin
+npm/debug/http
+
+# certificates
+*/**/certs/
+*.crt
+*.pem
+*.srl
+
+go.work*
+
+# scale-test
+test/scale/generated/*
+
+# test env file
+*.env

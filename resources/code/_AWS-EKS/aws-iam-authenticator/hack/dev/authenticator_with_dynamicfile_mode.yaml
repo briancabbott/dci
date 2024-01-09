@@ -1,0 +1,23 @@
+clusterID: {{CLUSTER_NAME}}
+server:
+  address: {{AUTHENTICATOR_IP}}
+  port: {{AUTHENTICATOR_PORT}}
+  stateDir: {{AUTHENTICATOR_STATE_DIR}}
+  generateKubeconfig: {{AUTHENTICATOR_GENERATE_KUBECONFIG}}
+  kubeconfig: {{AUTHENTICATOR_KUBECONFIG}}
+  backendmode: [ "MountedFile", "DynamicFile" ]
+  dynamicfilepath: {{AUTHENTICATOR_DYNAMICFILE_PATH}}
+  dynamicBackendModePath: {{BACKENDMODE_PATH}}
+  reservedPrefixConfig:
+  - backendmode: DynamicFile
+    usernamePrefixReserveList:
+    - "aws:"
+    - "iam:"
+    - "amazon:"
+    - "system:"
+    - "eks:"
+  mapUsers:
+  - userARN: {{ADMIN_ARN}}
+    username: kubernetes-admin
+    groups:
+    - system:masters

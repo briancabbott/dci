@@ -1,0 +1,200 @@
+# Project information
+site_name: eksctl
+site_description: 'The official CLI for Amazon EKS'
+site_author: 'eksctl authors'
+site_url: https://eksctl.io
+
+# Repository
+repo_name: 'eksctl-io/eksctl'
+repo_url: 'https://github.com/eksctl-io/eksctl'
+docs_dir: src
+edit_uri: ""
+
+# Configuration
+theme:
+    name: 'material'
+    custom_dir: 'theme'
+    favicon: 'img/favicon.png'
+    logo: 'img/logo.png'
+    font:
+        text: 'Segoe UI'
+        code: 'Roboto Mono'
+    palette:
+      - media: "(prefers-color-scheme: light)"
+        scheme: default
+        toggle:
+          icon: material/weather-night
+          name: Switch to dark mode
+        primary: black
+        accent: indigo
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        toggle:
+          icon: material/weather-sunny
+          name: Switch to light mode
+        primary: black
+        accent: indigo
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - json
+        - bash
+    features:
+      - header.autohide
+      - navigation.instant
+      - navigation.sections
+      - navigation.top
+      - navigation.tabs
+      - navigation.tabs.sticky
+      - search.highlight
+      - search.share
+      - search.suggest
+      - content.code.annotate
+      - content.tooltips
+      - content.tabs.link
+      - content.code.copy
+    
+# Plugins
+plugins:
+  - search
+  - glightbox
+  - minify:
+      minify_html: true
+  - social:
+      cards: true
+      cards_font: Roboto
+
+# Customization
+extra:
+    social:
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/WeaveworksInc/
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/weaveworks
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/weaveworks
+    - icon: fontawesome/brands/slack
+      link: https://slack.weave.works/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/c/WeaveWorksInc
+    analytics:
+      provider: google
+      property: G-EQKYCQY5Q2
+      feedback:
+        title: Was this page helpful?
+        ratings:
+          - icon: material/thumb-up-outline
+            name: This page was helpful
+            data: 1
+            note: >-
+              Thanks for your feedback!
+          - icon: material/thumb-down-outline
+            name: This page could be improved
+            data: 0
+            note: >- 
+              Thanks for your feedback! Help us improve this page by using our 
+              <a href="https://github.com/eksctl-io/eksctl/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">feedback form <a>.
+    consent:
+      title: Cookie consent
+      description: >- 
+        We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users
+        find what they're searching for. With your consent, you're helping us to make our documentation better.
+      actions:
+        - accept
+        - manage 
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/schema.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/@glidejs/glide
+  - https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js
+  - javascripts/extra.js
+
+# Extensions
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - codehilite:
+      linenums: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+  - md_in_html
+
+# Page tree
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Introduction: getting-started.md
+      - Installation: installation.md
+      - Announcements:
+        - announcements/managed-nodegroups-announcement.md
+        - announcements/nodegroup-override-announcement.md
+  - Usage:
+    - Clusters:
+      - usage/creating-and-managing-clusters.md
+      - usage/access-entries.md
+      - usage/outposts.md
+      - usage/unowned-clusters.md
+      - usage/eks-connector.md
+      - usage/customizing-the-kubelet.md
+      - usage/cloudwatch-cluster-logging.md
+      - usage/eks-private-cluster.md
+      - usage/addons.md
+      - usage/emr-access.md
+      - usage/fargate-support.md
+      - usage/cluster-upgrade.md
+      - usage/addon-upgrade.md
+    - Nodegroups:
+      - usage/managing-nodegroups.md
+      - usage/nodegroup-upgrade.md
+      - usage/nodegroup-with-custom-subnet.md
+      - usage/nodegroup-customize-dns.md
+      - usage/nodegroup-taints.md
+      - usage/eks-managed-nodes.md
+      - usage/launch-template-support.md
+      - usage/instance-selector.md
+      - usage/spot-instances.md
+      - usage/gpu-support.md
+      - usage/arm-support.md
+      - usage/autoscaling.md
+      - usage/custom-ami-support.md
+      - usage/container-runtime.md
+      - usage/windows-worker-nodes.md
+      - usage/nodegroup-additional-volume-mappings.md
+    - GitOps:
+      - usage/gitops-v2.md
+    - Security:
+      - usage/security.md
+      - usage/kms-encryption.md
+    - Networking:
+      - usage/vpc-networking.md
+      - usage/vpc-configuration.md
+      - usage/vpc-subnet-settings.md
+      - usage/vpc-cluster-access.md
+      - usage/cluster-subnets-security-groups.md
+      - usage/vpc-ip-family.md
+    - IAM:
+      - usage/minimum-iam-policies.md
+      - usage/iam-permissions-boundary.md
+      - usage/iam-policies.md
+      - usage/iam-identity-mappings.md
+      - usage/iamserviceaccounts.md
+      - usage/pod-identity-associations.md
+    - usage/dry-run.md
+    - usage/schema.md
+    - usage/eksctl-anywhere.md
+    - usage/eksctl-karpenter.md
+    - usage/troubleshooting.md
+    - FAQ: usage/faq.md
+  - Examples: "https://github.com/eksctl-io/eksctl/tree/main/examples"
+  - Community: community.md
+  - Adopters: adopters.md

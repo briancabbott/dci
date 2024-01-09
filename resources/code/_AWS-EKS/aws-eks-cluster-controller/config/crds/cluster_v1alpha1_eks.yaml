@@ -1,0 +1,384 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  creationTimestamp: null
+  labels:
+    controller-tools.k8s.io: "1.0"
+  name: ekss.cluster.eks.amazonaws.com
+spec:
+  group: cluster.eks.amazonaws.com
+  names:
+    kind: EKS
+    plural: ekss
+  scope: Namespaced
+  validation:
+    openAPIV3Schema:
+      properties:
+        apiVersion:
+          type: string
+        kind:
+          type: string
+        metadata:
+          type: object
+        spec:
+          properties:
+            accountId:
+              type: string
+            controlPlane:
+              properties:
+                clusterName:
+                  type: string
+                network:
+                  properties:
+                    subnetCidrs:
+                      items:
+                        type: string
+                      maxItems: 3
+                      minItems: 3
+                      type: array
+                    vpcCidr:
+                      type: string
+                  required:
+                  - vpcCidr
+                  - subnetCidrs
+                  type: object
+                version:
+                  type: string
+              required:
+              - clusterName
+              type: object
+            crossAccountRoleName:
+              type: string
+            nodeGroups:
+              items:
+                properties:
+                  iamPolicies:
+                    items:
+                      properties:
+                        policyDocument:
+                          properties:
+                            statement:
+                              items:
+                                properties:
+                                  action:
+                                    items:
+                                      type: string
+                                    type: array
+                                  effect:
+                                    type: string
+                                  resource:
+                                    items:
+                                      type: string
+                                    type: array
+                                required:
+                                - effect
+                                - action
+                                - resource
+                                type: object
+                              type: array
+                            version:
+                              type: string
+                          required:
+                          - version
+                          - statement
+                          type: object
+                        policyName:
+                          type: string
+                      required:
+                      - policyName
+                      - policyDocument
+                      type: object
+                    type: array
+                  instance:
+                    properties:
+                      ebsVolumeSize:
+                        format: int64
+                        maximum: 16384
+                        minimum: 1
+                        type: integer
+                      instanceType:
+                        enum:
+                        - t2.small
+                        - t2.medium
+                        - t2.large
+                        - t2.xlarge
+                        - t2.2xlarge
+                        - m3.medium
+                        - m3.large
+                        - m3.xlarge
+                        - m3.2xlarge
+                        - m4.large
+                        - m4.xlarge
+                        - m4.2xlarge
+                        - m4.4xlarge
+                        - m4.10xlarge
+                        - m5.large
+                        - m5.xlarge
+                        - m5.2xlarge
+                        - m5.4xlarge
+                        - m5.12xlarge
+                        - m5.24xlarge
+                        - c4.large
+                        - c4.xlarge
+                        - c4.2xlarge
+                        - c4.4xlarge
+                        - c4.8xlarge
+                        - c5.large
+                        - c5.xlarge
+                        - c5.2xlarge
+                        - c5.4xlarge
+                        - c5.9xlarge
+                        - c5.18xlarge
+                        - i3.large
+                        - i3.xlarge
+                        - i3.2xlarge
+                        - i3.4xlarge
+                        - i3.8xlarge
+                        - i3.16xlarge
+                        - r3.xlarge
+                        - r3.2xlarge
+                        - r3.4xlarge
+                        - r3.8xlarge
+                        - r4.large
+                        - r4.xlarge
+                        - r4.2xlarge
+                        - r4.4xlarge
+                        - r4.8xlarge
+                        - r4.16xlarge
+                        - x1.16xlarge
+                        - x1.32xlarge
+                        - p2.xlarge
+                        - p2.8xlarge
+                        - p2.16xlarge
+                        - p3.2xlarge
+                        - p3.8xlarge
+                        - p3.16xlarge
+                        type: string
+                      maxInstanceCount:
+                        format: int64
+                        maximum: 10
+                        minimum: 1
+                        type: integer
+                    type: object
+                  name:
+                    type: string
+                  version:
+                    type: string
+                required:
+                - name
+                type: object
+              type: array
+            region:
+              type: string
+          required:
+          - accountId
+          - crossAccountRoleName
+          - region
+          - controlPlane
+          - nodeGroups
+          type: object
+        status:
+          properties:
+            controlPlane:
+              properties:
+                apiVersion:
+                  type: string
+                kind:
+                  type: string
+                metadata:
+                  type: object
+                spec:
+                  properties:
+                    clusterName:
+                      type: string
+                    network:
+                      properties:
+                        subnetCidrs:
+                          items:
+                            type: string
+                          maxItems: 3
+                          minItems: 3
+                          type: array
+                        vpcCidr:
+                          type: string
+                      required:
+                      - vpcCidr
+                      - subnetCidrs
+                      type: object
+                    version:
+                      type: string
+                  required:
+                  - clusterName
+                  type: object
+                status:
+                  properties:
+                    certificateAuthorityData:
+                      type: string
+                    endpoint:
+                      type: string
+                    status:
+                      type: string
+                  required:
+                  - certificateAuthorityData
+                  - endpoint
+                  - status
+                  type: object
+              type: object
+            nodeGroups:
+              properties:
+                apiVersion:
+                  type: string
+                items:
+                  items:
+                    properties:
+                      apiVersion:
+                        type: string
+                      kind:
+                        type: string
+                      metadata:
+                        type: object
+                      spec:
+                        properties:
+                          iamPolicies:
+                            items:
+                              properties:
+                                policyDocument:
+                                  properties:
+                                    statement:
+                                      items:
+                                        properties:
+                                          action:
+                                            items:
+                                              type: string
+                                            type: array
+                                          effect:
+                                            type: string
+                                          resource:
+                                            items:
+                                              type: string
+                                            type: array
+                                        required:
+                                        - effect
+                                        - action
+                                        - resource
+                                        type: object
+                                      type: array
+                                    version:
+                                      type: string
+                                  required:
+                                  - version
+                                  - statement
+                                  type: object
+                                policyName:
+                                  type: string
+                              required:
+                              - policyName
+                              - policyDocument
+                              type: object
+                            type: array
+                          instance:
+                            properties:
+                              ebsVolumeSize:
+                                format: int64
+                                maximum: 16384
+                                minimum: 1
+                                type: integer
+                              instanceType:
+                                enum:
+                                - t2.small
+                                - t2.medium
+                                - t2.large
+                                - t2.xlarge
+                                - t2.2xlarge
+                                - m3.medium
+                                - m3.large
+                                - m3.xlarge
+                                - m3.2xlarge
+                                - m4.large
+                                - m4.xlarge
+                                - m4.2xlarge
+                                - m4.4xlarge
+                                - m4.10xlarge
+                                - m5.large
+                                - m5.xlarge
+                                - m5.2xlarge
+                                - m5.4xlarge
+                                - m5.12xlarge
+                                - m5.24xlarge
+                                - c4.large
+                                - c4.xlarge
+                                - c4.2xlarge
+                                - c4.4xlarge
+                                - c4.8xlarge
+                                - c5.large
+                                - c5.xlarge
+                                - c5.2xlarge
+                                - c5.4xlarge
+                                - c5.9xlarge
+                                - c5.18xlarge
+                                - i3.large
+                                - i3.xlarge
+                                - i3.2xlarge
+                                - i3.4xlarge
+                                - i3.8xlarge
+                                - i3.16xlarge
+                                - r3.xlarge
+                                - r3.2xlarge
+                                - r3.4xlarge
+                                - r3.8xlarge
+                                - r4.large
+                                - r4.xlarge
+                                - r4.2xlarge
+                                - r4.4xlarge
+                                - r4.8xlarge
+                                - r4.16xlarge
+                                - x1.16xlarge
+                                - x1.32xlarge
+                                - p2.xlarge
+                                - p2.8xlarge
+                                - p2.16xlarge
+                                - p3.2xlarge
+                                - p3.8xlarge
+                                - p3.16xlarge
+                                type: string
+                              maxInstanceCount:
+                                format: int64
+                                maximum: 10
+                                minimum: 1
+                                type: integer
+                            type: object
+                          name:
+                            type: string
+                          version:
+                            type: string
+                        required:
+                        - name
+                        type: object
+                      status:
+                        properties:
+                          status:
+                            type: string
+                        required:
+                        - status
+                        type: object
+                    type: object
+                  type: array
+                kind:
+                  type: string
+                metadata:
+                  type: object
+              required:
+              - items
+              type: object
+            status:
+              type: string
+          required:
+          - status
+          type: object
+  version: v1alpha1
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: []
+  storedVersions: []

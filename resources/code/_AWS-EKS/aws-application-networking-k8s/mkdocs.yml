@@ -1,0 +1,68 @@
+site_name: AWS Gateway API Controller
+repo_name: aws/aws-application-networking-k8s
+repo_url: https://github.com/aws/aws-application-networking-k8s
+edit_uri: edit/main/docs/
+strict: true
+
+
+nav:
+  - Home: index.md
+  - User Guides:
+    - Quick Start: guides/deploy.md
+    - Basic Setup: guides/getstarted.md
+    - Configuration: guides/environment.md
+  - Concepts:
+    - Design Overview: concepts/overview.md
+    - TLS: concepts/https.md
+    - Custom Domain Name: concepts/custom-domain-name.md
+    - GRPC: concepts/grpc.md
+    - Cross-Account Sharing: concepts/ram-sharing.md
+  - API Specification: api-reference.md
+  - API Reference:
+    - AccessLogPolicy: api-types/access-log-policy.md
+    - Gateway: api-types/gateway.md
+    - GRPCRoute: api-types/grpc-route.md
+    - HTTPRoute: api-types/http-route.md
+    - IAMAuthPolicy:  api-types/iam-auth-policy.md
+    - Service: api-types/service.md
+    - ServiceExport: api-types/service-export.md
+    - ServiceImport: api-types/service-import.md
+    - TargetGroupPolicy: api-types/target-group-policy.md
+    - VpcAssociationPolicy: api-types/vpc-association-policy.md
+  - Contributing:
+    - Developer Guide: contributing/developer.md
+    - Developer Cheat Sheet: contributing/developer-cheat-sheet.md
+  - FAQ: faq.md
+
+plugins:
+  - search
+theme:
+  name: material
+  language: en
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+#  features:
+#    - navigation.tabs
+# Extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - codehilite
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+extra_css:
+  - https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css
+extra_javascript:
+  - https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js

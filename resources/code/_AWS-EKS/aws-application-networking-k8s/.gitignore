@@ -1,0 +1,21 @@
+# Keep this until the APIs upstreamed
+coverage.out
+deploy.yaml
+
+# MkDocs documentation
+site*/
+
+# Multi-module go project
+go.work*
+
+# envFile from load_env_variables.sh
+**/envFile
+
+# IDE files/directories
+.idea/
+
+# gomock generated prog.go
+pkg/aws/services/gomock_reflect_*
+
+# Image build tarballed bundles
+*.tgz

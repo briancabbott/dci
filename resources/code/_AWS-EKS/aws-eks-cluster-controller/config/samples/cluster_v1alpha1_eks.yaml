@@ -1,0 +1,41 @@
+apiVersion: cluster.eks.amazonaws.com/v1alpha1
+kind: EKS
+metadata:
+  labels:
+    controller-tools.k8s.io: "1.0"
+  name: sample
+spec:
+  accountId: "12345667891"    # child AWS account
+  crossAccountRoleName: "aws-eks-cluster-controller-management"
+  region: "eu-west-1"         # region where child EKS cluster need to be created
+  controlPlane:
+    clusterName: "sample"
+    network:
+      vpcCidr: 172.16.0.0/16
+      subnetCidrs:
+        - 172.16.0.0/24
+        - 172.16.1.0/24
+        - 172.16.2.0/24
+  nodeGroups:
+    - name: "g1"
+      instance:
+        instanceType: "t2.xlarge"
+        maxInstanceCount: 2
+        ebsVolumeSize: 10
+      iamPolicies: 
+        - policyName: "root"
+          policyDocument: 
+            version: "2012-10-17"
+            statement: 
+              - effect: "Allow"
+                action: ["*"]
+                resource: ["*"]
+    - name: "g2"
+      iamPolicies: 
+        - policyName: "root"
+          policyDocument: 
+            version: "2012-10-17"
+            statement: 
+              - effect: "Allow"
+                action: ["*"]
+                resource: ["*"]

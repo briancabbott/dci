@@ -1,0 +1,18 @@
+approvers:
+- nckturner
+- micahhausler
+- wongma7
+- jyotimahapatra
+
+reviewers:
+- nckturner
+- micahhausler
+- justinsb
+- wongma7
+- jyotimahapatra
+
+emeritus_approvers:
+- christopherhein
+- mattmoyer
+- mattlandis
+- jaypipes

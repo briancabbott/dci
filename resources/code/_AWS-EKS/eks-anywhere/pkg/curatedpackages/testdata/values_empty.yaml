@@ -1,0 +1,11 @@
+registryMirrorSecret:
+  endpoint: ""
+  username: ""
+  password: ""
+  cacertcontent: ""
+  insecure: "ZmFsc2U="
+awsSecret:
+  id: ""
+  secret: ""
+  region: "dXMtd2VzdC0y"
+  config: ""

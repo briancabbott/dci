@@ -1,0 +1,11 @@
+git clone https://github.com/eksctl-io/eksctl
+git clone https://github.com/terraform-aws-modules
+git clone https://github.com/stacksimplify/aws-eks-kubernetes-masterclass
+git clone https://github.com/stacksimplify/terraform-on-aws-eks
+git clone https://github.com/awslabs/data-on-eks
+git clone https://github.com/stacksimplify/kubernetes-fundamentals
+git clone https://github.com/aws-samples/amazon-eks-custom-amis
+git clone https://github.com/DataDog/managed-kubernetes-auditing-toolkit
+git clone https://github.com/aws-ia/terraform-aws-eks-blueprints-addons
+git clone https://github.com/awslabs/aws-eks-cluster-controller
+git clone https://github.com/aws-samples/observability-with-amazon-opensearch

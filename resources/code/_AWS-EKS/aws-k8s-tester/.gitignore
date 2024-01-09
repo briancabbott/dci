@@ -1,0 +1,8 @@
+/.DS_Store
+/bin
+/_tmp
+.idea
+*.swp
+/aws-k8s-tester
+*/*/.DS_Store
+*/.DS_Store

@@ -1,0 +1,92 @@
+name: test-and-build
+
+on:
+  pull_request: {}
+  workflow_call: {}
+
+jobs:
+  unit-test:
+    name: Unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 #v4.1.1
+        with:
+          fetch-depth: 0
+      - name: Setup Go
+        uses: actions/setup-go@0c52d547c9bc32b1aa3301fd7a9cb496313a4491 #v5.0.0
+        with:
+          go-version: 1.20.x
+          cache: false
+      - name: Cache go-build and mod
+        uses: actions/cache@704facf57e6136b1bc63b828d79edcd491f0ee84 #v3.3.2
+        with:
+          path: |
+            ~/.cache/go-build/
+            ~/go/pkg/mod/
+          key: go-${{ hashFiles('go.sum') }}
+          restore-keys: |
+            go-
+      - name: Setup deps
+        run: |
+          make install-build-deps
+      - name: Unit test
+        run: |
+          PATH=$PATH:$(go env GOPATH)/bin make build
+          PATH=$PATH:$(go env GOPATH)/bin make unit-test-no-generate
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 #v4.1.1
+        with:
+          fetch-depth: 0
+      - name: Setup Go
+        uses: actions/setup-go@0c52d547c9bc32b1aa3301fd7a9cb496313a4491 #v5.0.0
+        with:
+          go-version: 1.20.x
+          cache: false
+      - name: Cache go-build and mod
+        uses: actions/cache@704facf57e6136b1bc63b828d79edcd491f0ee84 #v3.3.2
+        with:
+          path: |
+            ~/.cache/go-build/
+            ~/go/pkg/mod/
+          key: go-${{ hashFiles('go.sum') }}
+          restore-keys: |
+            go-
+      - name: Setup deps
+        run: |
+          make install-build-deps
+      - name: Lint
+        run: |
+          PATH=$PATH:$(go env GOPATH)/bin make lint
+  image:
+    name: Build and check image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 #v4.1.1
+        with:
+          fetch-depth: 0
+      - name: Setup Go
+        uses: actions/setup-go@0c52d547c9bc32b1aa3301fd7a9cb496313a4491 #v5.0.0
+        with:
+          go-version: 1.20.x
+          cache: false
+      - name: Cache go-build and mod
+        uses: actions/cache@704facf57e6136b1bc63b828d79edcd491f0ee84 #v3.3.2
+        with:
+          path: |
+            ~/.cache/go-build/
+            ~/go/pkg/mod/
+          key: go-${{ hashFiles('go.sum') }}
+          restore-keys: |
+            go-
+      - name: Setup deps
+        run: |
+          make install-build-deps
+      - name: build
+        run: |
+          PATH=$PATH:$(go env GOPATH)/bin make -f Makefile.docker check-build-image-manifest-up-to-date

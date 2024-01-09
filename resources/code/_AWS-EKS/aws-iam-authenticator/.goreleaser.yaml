@@ -1,0 +1,38 @@
+# Configuration for https://goreleaser.com/
+project_name: authenticator
+
+builds:
+  - id: aws-iam-authenticator
+    binary: aws-iam-authenticator
+    main: ./cmd/aws-iam-authenticator/
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+      - arm64
+      - ppc64le
+      - s390x
+    ignore:
+      - goos: windows
+        goarch: arm64
+    env:
+      - CGO_ENABLED=0
+    ldflags:
+      - "-s -w -X sigs.k8s.io/aws-iam-authenticator/pkg.Version={{.Version}} -X sigs.k8s.io/aws-iam-authenticator/pkg.CommitID={{.Commit}} -buildid=''"
+
+snapshot:
+  name_template: "git-{{.ShortCommit}}"
+
+archives:
+  - id: bin
+    format: binary
+
+release:
+  github:
+    owner: kubernetes-sigs
+    name: aws-iam-authenticator
+  draft: true
+  prerelease: false
+  name_template: "v{{.Version}}"

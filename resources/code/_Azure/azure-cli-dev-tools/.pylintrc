@@ -1,0 +1,32 @@
+[MESSAGES CONTROL]
+# For all codes, run 'pylint --list-msgs' or go to 'http://pylint-messages.wikidot.com/all-codes'
+disable=
+    cyclic-import,
+    fixme,
+    import-outside-toplevel,
+    invalid-name,
+    missing-docstring,
+    raise-missing-from,
+    too-few-public-methods,
+    too-many-arguments,
+    consider-using-f-string,
+    unspecified-encoding,
+    # These rules were added in Pylint >= 2.12, disable them to avoid making retroactive change
+    broad-exception-raised,
+    missing-timeout
+
+[TYPECHECK]
+# For Azure CLI extensions, we ignore some import errors as they'll be available in the environment of the CLI
+ignored-modules=azure,azure.cli,azure.cli.core,knack
+
+[FORMAT]
+max-line-length=120
+
+[DESIGN]
+# Maximum number of locals for function / method body
+max-locals=25
+# Maximum number of branch for function / method body
+max-branches=20
+
+[SIMILARITIES]
+min-similarity-lines=10

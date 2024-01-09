@@ -1,0 +1,16 @@
+env/
+.vs/
+src/aztool.egg-info/
+src/aztool/__pycache__/__init__.cpython-36.pyc
+src/aztool/__pycache__/
+src/azdev.egg-info/*
+*.pyc
+.vscode/
+azdev.egg-info/
+.tox/
+*.idea
+pip-wheel-metadata/*
+build/
+dist/
+cmd_coverage
+tested_command.txt

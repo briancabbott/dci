@@ -1,0 +1,102 @@
+resources:
+- repo: self
+trigger:
+  batch: true
+  branches:
+    include:
+    - '*'
+jobs:
+- job: Tox
+  condition: succeeded()
+  pool:
+    name: 'pool-ubuntu-2004'
+  strategy:
+    matrix:
+      Python38:
+        python.version: '3.8'
+        tox_env: 'py38'
+      Python39:
+        python.version: '3.9'
+        tox_env: 'py39'
+      Python310:
+        python.version: '3.10'
+        tox_env: 'py310'
+  steps:
+  - task: UsePythonVersion@0
+    displayName: 'Use Python $(python.version)'
+    inputs:
+      versionSpec: '$(python.version)'
+  - task: Bash@3
+    displayName: 'Run Tox'
+    env:
+      TOXENV: $(tox_env)
+    inputs:
+      targetType: 'filePath'
+      filePath: scripts/ci/run_tox.sh
+
+- job: ExtractMetadata
+  displayName: 'Extract Metadata'
+  condition: succeeded()
+  pool:
+    name: 'pool-ubuntu-2004'
+  steps:
+  - task: Bash@3
+    displayName: 'Extract Version'
+    inputs:
+      targetType: 'filePath'
+      filePath: scripts/ci/extract_version.sh
+
+  - task: PublishPipelineArtifact@0
+    displayName: 'Publish Artifact: metadata'
+    inputs:
+      TargetPath: $(Build.ArtifactStagingDirectory)
+      ArtifactName: metadata
+
+- job: BuildPythonWheel
+  displayName: 'Build Python Wheel'
+
+  dependsOn: ExtractMetadata
+  condition: succeeded()
+  pool:
+    name: 'pool-ubuntu-2004'
+  steps:
+  - task: UsePythonVersion@0
+    displayName: 'Use Python 3.9'
+    inputs:
+      versionSpec: 3.9
+
+  - task: Bash@3
+    displayName: 'Run Wheel Build Script'
+    inputs:
+      targetType: 'filePath'
+      filePath: scripts/ci/build.sh
+
+  - task: PublishPipelineArtifact@0
+    displayName: 'Publish Artifact: pypi'
+    inputs:
+      TargetPath: $(Build.ArtifactStagingDirectory)
+      ArtifactName: pypi
+
+- job: BuildCliDiffToolPythonWheel
+  displayName: 'Build Python Wheel for cli breaking change detection tool'
+
+  condition: succeeded()
+  pool:
+    name: 'pool-ubuntu-2004'
+  steps:
+  - task: UsePythonVersion@0
+    displayName: 'Use Python 3.8'
+    inputs:
+      versionSpec: 3.8
+
+  - task: Bash@3
+    displayName: 'Run Wheel Build Script'
+    inputs:
+      targetType: 'filePath'
+      filePath: scripts/ci/build_cli_diff_tool.sh
+
+  - task: PublishPipelineArtifact@0
+    displayName: 'Publish Artifact: pypi'
+    inputs:
+      TargetPath: $(Build.ArtifactStagingDirectory)
+      ArtifactName: pypi_cli_diff_tool

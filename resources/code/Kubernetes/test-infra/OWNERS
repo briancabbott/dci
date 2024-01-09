@@ -1,0 +1,24 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+reviewers:
+- aojea # lead
+- BenTheElder # lead
+- spiffxp # chair
+- stevekuznetsov # chair
+- cjwagner # oncall, lead
+- mpherman2 # oncall
+approvers:
+- aojea # lead
+- BenTheElder # lead
+- spiffxp # chair
+- stevekuznetsov # chair
+- test-infra-oncall # oncall
+- sig-k8s-infra-oncall # oncall
+emeritus_approvers:
+- amwat
+- fejta
+- ixdy
+- krzyzacy
+
+labels:
+- sig/testing

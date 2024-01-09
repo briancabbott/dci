@@ -1,0 +1,18 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+filters:
+  ".*":
+    approvers:
+      - sig-contributor-experience-technical-leads
+      - spiffxp
+    reviewers:
+      - sig-contributor-experience-technical-leads
+      - spiffxp
+    emeritus_approvers:
+      - fejta
+    labels:
+      - area/label_sync
+      - sig/contributor-experience
+  "labels\\.yaml":
+    required_reviewers:
+      - sig-contributor-experience-technical-leads

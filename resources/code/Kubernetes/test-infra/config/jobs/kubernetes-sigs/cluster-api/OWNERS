@@ -1,0 +1,27 @@
+# See the OWNERS docs at https://go.k8s.io/owners
+
+reviewers:
+- CecileRobertMichon
+- fabriziopandini
+- JoelSpeed
+- justinsb
+- sbueringer
+- killianmuldoon
+- neolit123
+- vincepri
+approvers:
+- CecileRobertMichon
+- fabriziopandini
+- justinsb
+- sbueringer
+- killianmuldoon
+- neolit123
+- vincepri
+emeritus_approvers:
+- luxas
+- ncdc
+- timothysc
+- detiber
+- davidewatson
+labels:
+- sig/cluster-lifecycle

@@ -1,0 +1,32 @@
+dashboard_groups:
+  - name: provider-azure
+    dashboard_names:
+      - provider-azure-azuredisk-csi-driver
+      - provider-azure-azurefile-csi-driver
+      - provider-azure-blobfuse-csi-driver
+      - provider-azure-cloud-provider-azure
+      - provider-azure-cloud-provider-azure-1-25-presubmit
+      - provider-azure-cloud-provider-azure-1-26-presubmit
+      - provider-azure-cloud-provider-azure-1-27-presubmit
+      - provider-azure-cloud-provider-azure-1-28-presubmit
+      - provider-azure-presubmit
+      - provider-azure-master-signal
+      - provider-azure-1.28-signal
+      - provider-azure-1.27-signal
+      - provider-azure-1.26-signal
+
+dashboards:
+  - name: provider-azure-azuredisk-csi-driver
+  - name: provider-azure-azurefile-csi-driver
+  - name: provider-azure-blobfuse-csi-driver
+  - name: provider-azure-cloud-provider-azure
+  - name: provider-azure-cloud-provider-azure-1-25-presubmit
+  - name: provider-azure-cloud-provider-azure-1-26-presubmit
+  - name: provider-azure-cloud-provider-azure-1-27-presubmit
+  - name: provider-azure-cloud-provider-azure-1-28-presubmit
+  - name: provider-azure-presubmit
+  - name: provider-azure-master-signal
+  - name: provider-azure-1.28-signal
+  - name: provider-azure-1.27-signal
+  - name: provider-azure-1.26-signal
+
